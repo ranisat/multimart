@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+.brandTitle{
+  -webkit-text-stroke: 1px #a2e3ff;
+  -webkit-text-fill-color: transparent;
+}
+
+@layer utilities{
+  .container {
+    @apply mx-auto max-w-[1252px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+  }
+  .h1 {
+    @apply text-[84px] font-bold leading-[84px] tracking-[-0.03em];
+  }
+
+  .h2 {
+    @apply text-[64px] font-bold leading-[70px];
+  }
+
+  .h3 {
+    @apply text-[48px] font-bold leading-[56px] tracking-[-0.02em];
+  }
+
+  .h4 {
+    @apply text-[40px] font-bold leading-[52px];
+  }
+
+  .h5 {
+    @apply text-[32px] font-bold leading-[40px];
+  }
+   .title{
+    @apply text-[30px] font-bold leading-[36px];
+   }
+  .h6 {
+    @apply text-[24px] font-medium leading-[36px];
+  }
+  .footerBg{
+    @apply before:absolute before:content-[''] before:w-72 before:h-72 before:bg-white/10 before:-top-5 before:-z-10 before:-right-24 before:rounded-full  before:ring-1 before:ring-gray-400 before:opacity-60
+  }
+  .offerBg{
+    @apply before:absolute before:content-[''] before:w-44 before:h-44 before:bg-gray-600 before:-top-5 before:-z-10 before:-right-12 before:rounded-full  before:ring-1  before:opacity-45
+  }
+  .footerTitle{
+    @apply after:absolute after:content-[''] after:w-20 after:h-0.5 after:bg-s1/100 after:left-0 after:-bottom-1
+  }
+  .text-title{
+    @apply before:absolute before:content-[''] before:w-40 before:rounded-3xl before:h-1 before:bg-p1 before:-bottom-0 before:left-[calc(5%-30px)] 
+  }
+  .main-btn{
+    @apply bg-p1 text-white text-center px-4 py-2 rounded-md font-medium transition-all duration-500 hover:bg-white hover:text-p1 border shadow-lg shadow-black/20 hover:border-p1
+  }
+  .active{
+    @apply focus:outline-none border-0
+  }
+  .breadCrumb-bg{
+    @apply w-full  bg-[url(assets/images/breadcrumb.jpg)] bg-no-repeat bg-center bg-cover 
+  }
+  .activeTab{
+    @apply bg-p1 px-4 py-2  text-s1
+  }
+  .show_hidden{
+    @apply transition-all duration-500 block;
+  }
+}
